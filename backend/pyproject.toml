@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medsim-backend"
+version = "0.1.0"
+description = "MedSim backend: FastAPI + Claude vision + agent-based hospital simulation"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110,<1",
+    "uvicorn>=0.30,<1",
+    "pydantic>=2.11,<3",
+    "pydantic-settings>=2.6,<3",
+    "anthropic>=0.39,<1",
+    "numpy>=2.3,<3",
+    "Pillow>=11.1,<12",
+    "python-multipart>=0.0.9,<1",
+    "python-dotenv>=1.0,<2",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
